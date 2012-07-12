@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a public respositry for the [8BIT](http://8bit.io) community and the [Standard](http://standardtheme.com) customers to openly contribute, maintain, share, and improve child themes are that build on Standard.
+This is a public repository for the [8BIT](http://8bit.io) community and the [Standard](http://standardtheme.com) customers to openly contribute, maintain, share, and improve child themes are that build on Standard.
 
 If you're interested in getting started with child themeing, grab a copy of the [Child Theme Kit](https://github.com/eightbit/standard-child-theme-kit).
 
