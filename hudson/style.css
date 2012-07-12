@@ -7,12 +7,12 @@ Author: Tom McFarlin
 Author URI: http://tommcfarlin.com
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Template: standard-wporg
+Template: standard
 */
 
 /* ------------------------------------------------------------------------ Import Standard Styles */
 
-@import url( '../../standard-wporg/style.css' );
+@import url( '../../standard/style.css' );
 
 /* ------------------------------------------------------------------------ Customizations */
 
