@@ -1,0 +1,155 @@
+/*  
+Theme Name: Hudson
+Theme URI: http://tommcfarlin.com
+Version: 0.4
+Description: The theme for TomMcFarlin.com based on Standard 3.
+Author: Tom McFarlin
+Author URI: http://tommcfarlin.com
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: standard-wporg
+*/
+
+/* ------------------------------------------------------------------------ Import Standard Styles */
+
+@import url( '../../standard-wporg/style.css' );
+
+/* ------------------------------------------------------------------------ Customizations */
+
+#site-title {
+	float: left;
+	display: inline;
+	margin-right: 20px;
+}
+
+#site-title a {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#site-title a {
+	color: #fff !important;	
+}
+
+#site-title a:hover {
+	color: #ccc;
+}
+
+#site-title,
+#menu-above-header,
+#footer {
+	font-family: 'Droid Sans', Arial, sans-serif;
+}
+
+#menu-above-header {
+	margin-bottom: 40px;
+}
+
+.post-title {
+	font-weight: 400;
+}
+
+.post.format-link a {
+	font-weight: 200;
+}
+
+#standard-post-advertisement .widget {
+	margin-bottom: 0;
+}
+
+#standard-post-advertisement .widget .textwidget {
+	min-height: 60px !important;
+}
+
+#commentform #comment-form-avatar { 
+	margin-right: 10px;
+}
+
+#cse-search-results iframe {
+	min-height: 1080px;
+	height: 1370px;
+}
+
+/* -- Pressed Ads -- */
+
+.textwidget {
+  min-height: 100px;
+}
+
+.pa-image {
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding: 2px;
+}
+
+.pa-copy,
+.pa-id {
+	float: left;
+	font-size: 12px;
+	line-height: 18px;
+	width: 150px;
+}
+
+.pa-copy,
+.pa-id a {
+  color: #000;
+  text-decoration: none;
+}
+
+.pa-id a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.pa-id {
+	font-size: 8px;
+	text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------------ Media Queries */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+	#site-title {
+		display: none;
+	}
+
+}
+
+/* Tablet and Mobile */
+@media (max-width: 979px) {	
+
+	#site-title {
+		margin-left: 4px;
+		margin-top: -6px;
+	}
+			
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+	#site-title {
+		margin-left: 4px;
+		margin-top: -6px;
+	}
+
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	#site-title {
+		margin-left: 4px;
+		margin-top: -6px;
+	}
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+
+}
