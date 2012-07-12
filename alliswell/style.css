@@ -1,0 +1,198 @@
+/*  
+Theme Name: Alliswell -bassed of jarederickson.com
+Theme URI: https://github.com/eightbit/standard-child-themes
+Version: 0.9
+Description: minimal light theme based off jarederickson.com
+Author: Jared Erickson
+Author URI: http://jarederickson.com
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: standard
+*/
+
+/* ------------------------------------------------------------------------ Import Standard Styles */
+
+@import url( '../standard/style.css' );
+
+/* ------------------------------------------------------------------------ Customizations */
+
+
+html, body {
+	background: #fff;
+}
+
+#wrapper {
+	padding-top: 80px;
+}
+
+a {
+	color: #327598;
+}
+
+a:hover {
+	text-decoration: #454545;
+}
+
+.navbar .brand, .navbar .brand h1 {
+	color: #222;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.btn-navbar {
+	float: right;
+	background: #fff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
+.btn-navbar:hover {
+	background: #f0f0f0;
+}
+
+.btn-navbar .icon-bar {
+	background-color: #999;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.navbar-fixed-top {
+	position: fixed;
+}
+
+.admin-bar .navbar-fixed-top {
+	top: 28px;
+}
+
+.navbar-inner, .navbar .fill {
+	background: #fff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.navbar .nav > li > a {
+	color: #b0b0b0;
+	text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+	color: #454545;
+}
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+	color: #999;
+	background: transparent;
+	border-bottom: 1px solid #eee;
+}
+
+.post-title {
+	font-size: 24px;
+	font-weight: 300;
+	padding: 10px 0 0;
+}
+
+.post {
+	margin-bottom: 60px;
+}
+
+.post img.size-large, .post img.size-full {
+	width: 100%;
+}
+
+.post, #comments, #pings, #no-comments, #respond {
+	margin-right: 20px;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.post-header, .post .entry-content, .post .entry-summary {
+	padding: 0 0 0 0;
+}
+
+.post-header-meta {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.post-meta {
+	padding: 10px 0;
+}
+
+
+/* Sidebar */
+
+#sidebar select {
+	width: 100%;
+}
+
+.widget h4.widget-title {
+	font-weight: normal;
+}
+
+#footer {
+	background: transparent;
+	border-top: 1px solid #eee;
+}
+
+#sub-floor {
+	background: transparent;
+}
+
+#sub-floor #credit a:hover {
+	color: #999;
+	text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------------ Media Queries */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+	.post, #comments, #pings, #no-comments, #respond {
+		margin-right: 0;
+	}
+
+}
+
+/* Tablet and Mobile */
+@media (max-width: 979px) {	
+	.navbar-fixed-top  {
+		padding-top: 40px;
+		position: relative;
+	}
+	
+	#wrapper {
+		padding-top: 0;
+	}
+	
+	.navbar ul.nav-menu {
+		border-top: none;
+	}
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+	
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+	
+}
