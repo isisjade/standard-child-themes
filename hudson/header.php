@@ -58,11 +58,11 @@
 										
 						<?php if( is_front_page() || 'video' == get_post_format() || 'image' == get_post_format() || '' == get_the_title() ) { ?>					
 							<h1 id="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php get_bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php get_bloginfo( 'name' ); ?>" rel="home" class="brand"><?php bloginfo( 'name' ); ?></a>
 							</h1>
 						<?php } else { ?>
 							<p id="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php get_bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>	
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php get_bloginfo( 'name' ); ?>" rel="home" class="brand"><?php bloginfo( 'name' ); ?></a>	
 							</p>
 						<?php } // end if/else ?>
 									

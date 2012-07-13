@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5 (July 13, 2012)
+
+* Restoring original theme image
+* Adding class="brand" to header anchor
+
 ## 0.4 (July 12th, 2012)
 
 * Adding styles for a notice that appears on top of the post

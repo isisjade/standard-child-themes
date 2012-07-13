@@ -13,6 +13,20 @@ function hudson_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'hudson_enqueue_styles' );
 
 /**
+ * Enqueues admin stylesheets and JavaScript.
+ */
+function hudson_enqueue_admin_styles() {
+	
+	wp_register_style( 'hudson-admin', get_stylesheet_directory_uri() . '/css/admin.css' );
+	wp_enqueue_style( 'hudson-admin' );
+
+	wp_register_script( 'hudson-admin', get_stylesheet_directory_uri() . '/js/admin.js' );
+	wp_enqueue_script( 'hudson-admin' );
+	
+} // end hudson_enqueue_admin_styles
+add_action( 'admin_print_styles', 'hudson_enqueue_admin_styles' );
+
+/**
  * Determines if the given post is older than 14 days.
  *
  * @returns	True if the post is older than 14 days; otherwise, false.
@@ -29,4 +43,77 @@ function hudson_post_is_two_weeks_old() {
 	
 } // end hudson_post_is_two_weeks_old
 
-?>
+/**
+ * Add the post meta box for the link post format URL.
+ */
+function hudson_add_url_field_to_link_post_format() {
+	
+	add_meta_box(
+		'link_format_url',
+		__( 'Link URL', 'standard' ),
+		'hudson_link_url_field_display',
+		'post',
+		'side',
+		'high'
+	);
+	
+} // end hudson_add_url_to_link_post_type
+add_action( 'add_meta_boxes', 'hudson_add_url_field_to_link_post_format' );
+
+/**
+ * Renders the input field for the URL.
+ * 
+ * @params	$post	The post on which this meta box is attached.
+ */
+function hudson_link_url_field_display( $post ) {
+	
+	wp_nonce_field( plugin_basename( __FILE__ ), 'hudson_link_url_field_nonce' );
+
+	echo '<input type="text" id="hudson_link_url_field" name="hudson_link_url_field" value="' . get_post_meta( $post->ID, 'hudson_link_url_field', true ) . '" />';
+	
+} // end standard_post_level_layout_display
+
+/**
+ * Sets the URL for the given post.
+ *
+ * @params	$post_id	The ID of the post that we're serializing
+ */
+function hudson_save_link_url_data( $post_id ) {
+	
+	if( isset( $_POST['hudson_link_url_field_nonce'] ) && isset( $_POST['post_type'] ) ) {
+	
+		// Don't save if the user hasn't submitted the changes
+		if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		} // end if
+		
+		// Verify that the input is coming from the proper form
+		if( ! wp_verify_nonce( $_POST['hudson_link_url_field_nonce'], plugin_basename( __FILE__ ) ) ) {
+			return;
+		} // end if
+		
+		// Make sure the user has permissions to post
+		if( 'post' == $_POST['post_type']) {
+			if( ! current_user_can( 'edit_post', $post_id ) ) {
+				return;
+			} // end if
+		} // end if/else
+	
+		// Read the Link's URL
+		$link_url = '';
+		if( isset( $_POST['hudson_link_url_field'] ) ) {
+			$link_url = esc_url( $_POST['hudson_link_url_field'] );
+		} // end if
+		
+		// If the value exists, delete it first. I don't want to write extra rows into the table.
+		if ( 0 == count( get_post_meta( $post_id, 'hudson_link_url_field' ) ) ) {
+			delete_post_meta( $post_id, 'hudson_link_url_field' );
+		} // end if
+
+		// Update it for this post.
+		update_post_meta( $post_id, 'hudson_link_url_field', $link_url );
+
+	} // end if
+
+} // end standard_save_post_layout_data
+add_action( 'save_post', 'hudson_save_link_url_data' );
