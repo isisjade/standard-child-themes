@@ -2,9 +2,14 @@
 
 	$(function() {
 	
-		// Initially hide the format unless this is a Link
+		// Initially hide the link post format unless this is a Link
 		if( 'post-format-link' !== $('#post-formats-select').children(':checked').attr('id') ) { 
 			$('#link_format_url').hide();
+		} // end if
+		
+		// Don't repositing the title container unless we're on a quote post format
+		if( 'post-format-quote' === $('#post-formats-select').children(':checked').attr('id') ) {
+			$('#titlediv').insertAfter('#postdivrich');
 		} // end if
 		
 		// Monitor which post format is selected

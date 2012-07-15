@@ -12,3 +12,4 @@ A personal child theme by Tom McFarlin for use on his various properties.
 * Two week old banner under posts
 * Notice area (to be added above post content - TODO as a plugin)
 * Link post formats with descriptions. Hides content if no content is given.
+* Quote post formats look like the front end.

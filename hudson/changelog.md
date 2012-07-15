@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6 (July 15, 2012)
+
+* Changing the look and feel of the quote post format to look like the links, but with the quote icon
+* Setting up the admin to move the quote post format title under the content
+
 ## 0.5 (July 13, 2012)
 
 * Restoring original theme image
