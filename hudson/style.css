@@ -47,6 +47,27 @@ Template: standard
 	font-weight: 400;
 }
 
+/* -- Quote Post Format -- */
+
+.post.format-quote .post-header {
+	background-color: #000;
+	background-image: url(images/bg-quote.png);
+}
+
+.post.format-quote .post-header .entry-content p {
+	font-style: normal;
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 200;
+}
+
+.post.format-quote .post-header .entry-content {
+	background-image: url(images/icn-quote.png);
+	
+}
+
+/* -- Link Post Format -- */
+
 .post.format-link .post-header .entry-content {
 	padding-left: 50px;
 }
@@ -71,9 +92,13 @@ Template: standard
 	min-height: 60px !important;
 }
 
+/* -- Comments -- */
+
 #commentform #comment-form-avatar { 
 	margin-right: 10px;
 }
+
+/* -- Google Custom Search -- */
 
 #cse-search-results iframe {
 	min-height: 1080px;
