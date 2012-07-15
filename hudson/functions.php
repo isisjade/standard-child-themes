@@ -1,6 +1,19 @@
 <?php 
 
 /**
+ * Changes the default size of the poset editor to 20 lines. Since I use a MacBook Air,
+ * this particular size of the editor works optimal for my screen :).
+ */
+function hudson_set_editor_size() {
+	
+	if( '20' != get_option( 'default_post_edit_rows' ) ) {
+		update_option( 'default_post_edit_rows', 20 );
+	} // end if
+	
+} // end hudson_set_editor_size
+add_action( 'admin_init', 'hudson_set_editor_size' );
+
+/**
  * Enqueues stylesheets for this theme.
  */
 function hudson_enqueue_styles() {
