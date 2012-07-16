@@ -26,6 +26,18 @@ function hudson_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'hudson_enqueue_styles' );
 
 /**
+ * Adds the Sharrre library to replace JetPack's sharers
+ */
+function hudson_enqueue_scripts() {
+	
+	// Sharrre
+	wp_register_script( 'hudson-share', get_stylesheet_directory_uri() . '/lib/sharrre/jquery.sharrre-1.3.2.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'hudson-share' );
+	
+} // end hudson_enqueue_styles
+//add_action( 'wp_enqueue_scripts', 'hudson_enqueue_scripts' );
+
+/**
  * Enqueues admin stylesheets and JavaScript.
  */
 function hudson_enqueue_admin_styles() {
@@ -38,6 +50,25 @@ function hudson_enqueue_admin_styles() {
 	
 } // end hudson_enqueue_admin_styles
 add_action( 'admin_print_styles', 'hudson_enqueue_admin_styles' );
+
+/**
+ * Adds the Sharrre functionality below the content on each post.
+ */
+function hudson_add_sharrre( $content ) {
+	
+	if( is_single() ) {
+		
+		$html = '<div id="share"></div><!-- /#share -->';
+		$html .= '<script type="text/javascript">';
+			$html .= "$('#share').sharrre({ share: { googlePlus: true, facebook: true, twitter: true }, url: '" . get_permalink() . "'});";
+		$html .= '</script>';
+		
+	} // end if
+	
+	return $content;
+	
+} // end hudson_add_sharrre
+//add_filter( 'the_content', 'hudson_add_sharrre' );
 
 /**
  * Determines if the given post is older than 14 days.

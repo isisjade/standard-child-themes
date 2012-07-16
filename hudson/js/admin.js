@@ -1,7 +1,7 @@
 (function($) {
 
 	$(function() {
-	
+
 		// Initially hide the link post format unless this is a Link
 		if( 'post-format-link' !== $('#post-formats-select').children(':checked').attr('id') ) { 
 			$('#link_format_url').hide();

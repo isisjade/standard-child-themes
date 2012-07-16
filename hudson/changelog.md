@@ -4,6 +4,7 @@
 
 * Changing the look and feel of the quote post format to look like the links, but with the quote icon
 * Setting up the admin to move the quote post format title under the content
+* Improving styles for the Syntax Highlight Plugin
 
 ## 0.5 (July 13, 2012)
 
@@ -29,3 +30,7 @@
 ## 0.1 (June 30th, 2012)
 
 * Initial Release
+
+TODO:
+* Include Sharrre
+* Test with Theme Checker, LPC, and Debogger

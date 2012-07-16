@@ -142,6 +142,13 @@ Template: standard
 	text-transform: uppercase;
 }
 
+/* -- Syntax Highlighter -- */
+
+body .syntaxhighlighter code, 
+body .syntaxhighlighter .gutter { 
+	font-family: Monaco, "Courier New", monospace !important; 
+}
+
 /* ------------------------------------------------------------------------ Media Queries */
 
 /* Smartphones */
