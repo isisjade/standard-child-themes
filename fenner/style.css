@@ -1,0 +1,204 @@
+/*  
+Theme Name: Fenner
+Theme URI: https://github.com/eightbit/standard-child-theme/fenner
+Version: 0.9
+Description: Child theme for Chris Fenner's personal blog
+Author: Jared Erickson
+Author URI: http://jarederickson.com
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: standard
+*/
+
+/* ------------------------------------------------------------------------ Import Standard Styles */
+
+@import url( '../../standard/style.css' );
+
+/* ------------------------------------------------------------------------ Customizations */
+
+
+
+body {
+	color: #fff;
+	background: #181818;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	color: #e0e0e0;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* sidebar */
+table#wp-calendar caption {
+	background-color: #202020;
+	background-color: rgba(41,41,41,0.4);
+}
+
+.widget_calendar td {
+	color: #454545;
+}
+
+/* pagination icons */
+.pager [class^="icon-"], 
+.pager [class*=" icon-"] {
+	background-image: url(img/glyphicons-halflings-white.png);
+}
+
+.pager a:hover,
+.previous-page a:hover,
+.next-page a:hover {
+	color: #eee;
+	background-color: #202020;
+	background-color: rgba(41,41,41,0.4);
+}
+
+
+#hgroup {
+	text-align: center;
+	margin: 80px 0;
+}
+
+	#logo {
+		float: none
+	}
+	
+	#site-title, #site-title a {
+		color: #fff;
+	}
+	
+	#site-title a:hover, #site-title a:focus, #site-title a:active {
+		color: #e0e0e0;
+	}
+	
+	
+/* Posts */ 
+
+.post {
+	margin-bottom: 80px;
+}
+
+.post, #comments, #pings, #no-comments, #respond {
+	background: transparent;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+	.post-header {
+		padding: 0 0 25px;
+		margin-bottom: 25px;
+		border-color: #303030;
+	}
+	
+	.post-header-meta {
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+		.post-title, .post-title a, .post-title a:visited {
+			color: #eee;
+			font-size: 20px;
+			font-weight: normal;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+		
+	
+	.post .entry-content, .post .entry-summary {
+		padding: 0 0 20px;
+	}
+	
+	#author-box {
+		background: transparent;
+		padding: 0;
+	}
+	
+	.post-meta {
+		border: none;
+		padding: 0; 
+	}
+
+
+.breadcrumb {
+	background: transparent;
+	box-shadow: none;
+	border-color: transparent;
+	padding: 10px 0;e
+}
+
+.breadcrumb li {
+	text-shadow: none;
+}
+
+/* comments */ 
+
+.page-link {
+	border-color: #303030;
+}
+
+#comments .comment-container .comment-entry .name {
+	color: #999;
+}
+
+#comments .date a {
+	color: #eee;
+}
+
+#comments .comment-container {
+	border-color: #303030;
+}
+
+#comments > ol > li > ul.children > li .comment-container {
+	border-color: #303030;
+}
+
+
+
+/* sidebar */
+
+#sidebar {
+	color: #eee;
+}
+
+.widget h4.widget-title {
+	color: #e0e0e0;
+}
+
+/* ------------------------------------------------------------------------ Media Queries */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+}
+
+/* Tablet and Mobile */
+@media (max-width: 979px) {	
+			
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+	
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+	
+}
+
