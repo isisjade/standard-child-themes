@@ -68,6 +68,10 @@ Template: standard
 
 /* -- Link Post Format -- */
 
+.post.format-link .post-title { 
+	margin-top: -6px;
+}
+
 .post.format-link .post-header .entry-content {
 	padding-left: 50px;
 }

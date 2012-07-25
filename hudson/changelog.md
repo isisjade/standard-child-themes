@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7 ( July 16th, 2012) 
+
+* Updating margins for link post types
+
 ## 0.6 (July 15, 2012)
 
 * Changing the look and feel of the quote post format to look like the links, but with the quote icon
