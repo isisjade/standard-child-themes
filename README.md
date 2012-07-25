@@ -31,6 +31,18 @@ To get started, be sure to read [the series](TODO) in its entirety.
 
 ## FAQ's
 
+### Why isn't my child theme showing up in the WordPress Dashboard?
+
+Because the child themes are located in a subdirectory (that is, `wp-content/themes/standard-child-themes,` the child theme's stylesheet needs to properly reference Standard.
+
+Make sure that your `style.css` contains this:
+
+`@import url( '../../standard/style.css' );`
+
+Rather than this:
+
+`@import url( '../standard/style.css' );`
+
 ### When will my theme be merged into the repository?
 
 As soon as we have time to merge the pull request.
