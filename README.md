@@ -6,7 +6,7 @@ If you're interested in getting started with child themeing, be sure to grab our
 
 ## Guidelines
 
-In order for plugins to be accepted into this repository, they must adhere to the following guidelines...
+In order for child themes to be accepted into this repository, they must adhere to the following guidelines...
 
 1. Be fully localized
 2. Include a README
@@ -18,7 +18,7 @@ In order for plugins to be accepted into this repository, they must adhere to th
 ### The Short Version
 
 1. Using your favorite GitHub client, fork this repository
-2. Place the directory in your existing `wp-content/themes/` directory.
+2. Place the directory in your existing `wp-content/themes` directory.
 3. Create a subdirectory for your child theme and begin developing it
 4. Commit your theme to the repository and create a pull request
 5. 8BIT will merge your pull request
