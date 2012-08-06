@@ -1,8 +1,8 @@
 /*  
 Theme Name: Hudson
 Theme URI: http://tommcfarlin.com
-Version: 0.4
-Description: The theme for TomMcFarlin.com based on Standard 3.
+Version: 0.8
+Description: The personal theme for Tom McFarlin based on Stanard 3.
 Author: Tom McFarlin
 Author URI: http://tommcfarlin.com
 License: GNU General Public License v2.0
@@ -67,10 +67,6 @@ Template: standard
 }
 
 /* -- Link Post Format -- */
-
-.post.format-link .post-title { 
-	margin-top: -6px;
-}
 
 .post.format-link .post-header .entry-content {
 	padding-left: 50px;
@@ -148,9 +144,32 @@ Template: standard
 
 /* -- Syntax Highlighter -- */
 
-body .syntaxhighlighter code, 
-body .syntaxhighlighter .gutter { 
-	font-family: Monaco, "Courier New", monospace !important; 
+body .syntaxhighlighter code, body .syntaxhighlighter .gutter { 
+	font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+
+/* -- PayPal Donate -- */
+
+.entry-content form#paypal {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-top: -35px;
+}
+
+/* -- Stripe Donate -- */
+
+#wp-stripe-types {
+	width: 100% !important;
+	background-position: center !important;
+}
+
+/* -- Social Sharers -- */
+
+.sharedaddy .sd-sharing {
+	border: 0 !important;
+	margin-left: -100px !important;
 }
 
 /* ------------------------------------------------------------------------ Media Queries */

@@ -45,7 +45,7 @@ function hudson_enqueue_admin_styles() {
 	wp_register_style( 'hudson-admin', get_stylesheet_directory_uri() . '/css/admin.css' );
 	wp_enqueue_style( 'hudson-admin' );
 
-	wp_register_script( 'hudson-admin', get_stylesheet_directory_uri() . '/js/admin.js' );
+	wp_register_script( 'hudson-admin', get_stylesheet_directory_uri() . '/js/admin.min.js' );
 	wp_enqueue_script( 'hudson-admin' );
 	
 } // end hudson_enqueue_admin_styles

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8 ( August 6th, 2012) 
+
+* Adding styles for PayPal and Stripe
+* Adding LESS-based CSS for admin styles and /dev/ JavaScript for CodeKit integration
+* Updated the README
+* Added a meta description for archive / category pages
+
 ## 0.7 ( July 16th, 2012) 
 
 * Updating margins for link post types
@@ -34,7 +41,3 @@
 ## 0.1 (June 30th, 2012)
 
 * Initial Release
-
-TODO:
-* Include Sharrre
-* Test with Theme Checker, LPC, and Debogger

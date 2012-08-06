@@ -7,6 +7,10 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<title><?php wp_title( '' ); ?></title>
+		<?php if ( is_archive() || is_category() ) { ?>
+			<?php $category = get_the_category(); ?>
+			<meta name="description" content="<?php echo $category[0]->description; ?>"/>
+		<?php } // end if ?>
 		<?php $presentation_options = get_option( 'standard_theme_presentation_options'); ?>
 		<?php if( '' != $presentation_options['fav_icon'] ) { ?>
 			<link rel="shortcut icon" href="<?php echo $presentation_options['fav_icon']; ?>" />
